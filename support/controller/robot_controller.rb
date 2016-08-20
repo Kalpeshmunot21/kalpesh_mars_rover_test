@@ -8,7 +8,7 @@ class RobotController
       plateau = get_plateau
       return unless plateau
       begin
-        puts "Insert input (type ctrl-d when you have done)"
+        puts "Insert input (press enter key to insert next line input)"
         robot = get_robot
         robots_with_instructions << [robot, get_robots_instructions] if robot
       end while robot
@@ -46,7 +46,7 @@ class RobotController
       Robot.new($1.to_i, $2.to_i, $3.to_s.upcase)
     end
 
-    def get_robot_instructions
+    def get_robots_instructions
       until (input = gets) && (input =~ /([RLM]+)/i)
         return nil if input.to_s.chomp.empty?
         puts "Invalid input"

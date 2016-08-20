@@ -46,5 +46,5 @@ Expected Output:
 
 To run the program execute on the command-line, being in program's path:
 
-  ruby robot_navigation/init_rover.rb
+ruby run_robot.rb
 
